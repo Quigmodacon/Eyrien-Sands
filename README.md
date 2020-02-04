@@ -11,4 +11,21 @@ fight wild creatures and eat them to survive in the desert.
 
 ~~~Psuedocode~~~
 
+~MAP~
+vector of vectors of mapTile pointers.
+mapTiles{
+	int x, y
+	string Description
+	string Name
+	string Type
+	vector<items>
+	
+}
+desert and scrub tiles will have generally the same description.
 
+Items {
+	int quantity
+	string description
+	string name
+	string type
+}
