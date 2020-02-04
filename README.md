@@ -23,6 +23,8 @@ mapTiles{
 }
 desert and scrub tiles will have generally the same description.
 
+~ITEMS~
+
 Items {
 	int quantity
 	string description
