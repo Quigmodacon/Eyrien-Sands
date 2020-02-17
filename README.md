@@ -19,15 +19,37 @@ mapTiles{
 	string Name
 	string Type
 	vector<items>
+	itemps<loot>
 	
 }
 desert and scrub tiles will have generally the same description.
 
 ~ITEMS~
 
-Items {
+items {
 	int quantity
 	string description
 	string name
 	string type
+}
+
+~Monsters~
+
+monsters {
+	int health
+	int stre
+	int agil
+	int inte
+	items equipped
+	items loot
+}
+
+~Player~ {
+	int health
+	int stre
+	int agil
+	int inte
+	items equipped
+	items inve
+	mapTiles* location
 }
