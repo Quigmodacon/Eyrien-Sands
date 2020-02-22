@@ -9,3 +9,6 @@ Eyrien_Sands: $(OBJ_FILES)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	clang++ -c -o $@ $<
+
+clean:
+	rm -f $(OBJ_DIR)/*.o
