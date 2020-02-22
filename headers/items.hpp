@@ -50,6 +50,28 @@ namespace item {
 		vector<Quality> qualities
 	}
 
+	// Armour Item Class ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	class armour {
+		enum class Quality{Poison, Holy, Unholy, Fire, Electric, Water};
+		enum class Type{Helm, Chest, Arm, Wrist, Gloves, Legs, Boots};
+		enum class Weight{Heavy, Medium, Light};
+	public:
+		potion(const String& _name, const String& _description, int _def, const String& _weight, const String& _type, vector<String> quals);
+
+		Quality qConvert(const String& str) const;
+		Type tConvert(const String& str) const;
+		Weight wConvert(const String& str) const;
+
+		friend std::ostream& operator<< (std::ostream& out, const armour& arm);
+	private:
+		String name;
+		String description;
+		int def;
+		Weight weight;
+		Type type;
+		vector<Quality> qualities
+	}
+
 #endif
 
 }

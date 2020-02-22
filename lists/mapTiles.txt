@@ -2,7 +2,4 @@
 # Types {Plains, Forest, Desert, City, Village, Town:}
 #
 # Cities
-"0" "0" "Ahmesh" "Sprawling City, Capital of the Ahmeshian Diarchy" "City"
-#
 # Villages
-"" "" "The Lost Town" "Small Fishing Village" "Village"
