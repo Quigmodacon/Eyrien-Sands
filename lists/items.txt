@@ -1,3 +1,3 @@
 # { string name, string description, string type }
 #
-"Health Potion" "Heals your Health... duh" "Potion"
+"Health Potion" "Heals your Health... duh" "RecoverHP"

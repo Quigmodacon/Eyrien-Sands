@@ -27,7 +27,6 @@ desert and scrub tiles will have generally the same description.
 ~ITEMS~
 
 items {
-	int quantity
 	string description
 	string name
 	string type
