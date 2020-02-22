@@ -1,2 +1,3 @@
 # { name, stre, agil, inte }
 #
+"wolf" "1" "2" "1"
