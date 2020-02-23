@@ -5,7 +5,7 @@
 #ifndef __ITEMS_HPP__
 #define __ITEMS_HPP__
 
-#include "./string/string.hpp"
+#include "../string/string.hpp"
 #include <vector>
 #include <iostream>
 
@@ -16,26 +16,25 @@ namespace item {
 
 	// Potion Item Class ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	class potion {
-		enum class Quality{Drunk, StrBoost, IntBoost, AgiBoost,
-			RecoverHP, RecoverMP};
+		enum class Quality{Drunk, StrBoost, IntBoost, AgiBoost, RecoverHP, RecoverMP};
 	public:
-		potion(const String& _name, const String& _description, vector<String> quals);
+		potion(const String& _name, const String& _description, std::vector<String> quals);
 
 		Quality qConvert(const String& str) const;
 
-		friend std::ostream& operator<< (std::ostream& out, const potion& pot) const;
+		friend std::ostream& operator<< (std::ostream& out, const potion& pot);
 	private:
 		String name;
 		String description;
-		vector<Quality> qualities;
+		std::vector<Quality> qualities;
 	};
 
 	// Weapon Item Class ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	class weapon {
 		enum class Quality{Poison, Holy, Unholy, Fire, Electric, Water};
-		enum class Type{Ranged, Melee}
+		enum class Type{Ranged, Melee};
 	public:
-		potion(const String& _name, const String& _description, int _damage, int _reach, const String& _type, vector<String> quals);
+		weapon(const String& _name, const String& _description, int _damage, int _reach, const String& _type, std::vector<String> quals);
 
 		Quality qConvert(const String& str) const;
 		Type tConvert(const String& str) const;
@@ -47,8 +46,8 @@ namespace item {
 		int damage;
 		int reach;
 		Type type;
-		vector<Quality> qualities
-	}
+		std::vector<Quality> qualities;
+	};
 
 	// Armour Item Class ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	class armour {
@@ -56,7 +55,7 @@ namespace item {
 		enum class Type{Helm, Chest, Arm, Wrist, Gloves, Legs, Boots};
 		enum class Weight{Heavy, Medium, Light};
 	public:
-		potion(const String& _name, const String& _description, int _def, const String& _weight, const String& _type, vector<String> quals);
+		armour(const String& _name, const String& _description, int _def, const String& _weight, const String& _type, std::vector<String> quals);
 
 		Quality qConvert(const String& str) const;
 		Type tConvert(const String& str) const;
@@ -69,8 +68,8 @@ namespace item {
 		int def;
 		Weight weight;
 		Type type;
-		vector<Quality> qualities
-	}
+		std::vector<Quality> qualities;
+	};
 
 #endif
 

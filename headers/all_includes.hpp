@@ -6,4 +6,6 @@
 #include "../headers/mapTiles.hpp"
 #include "../headers/monsters.hpp"
 #include "../headers/player.hpp"
+#include "../headers/point.hpp"
+#include "../headers/inventory.hpp"
 #endif
