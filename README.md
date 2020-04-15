@@ -9,46 +9,14 @@ Destroy the Capital to finish main story.
 Save and quit to continue any time.
 fight wild creatures and eat them to survive in the desert.
 
-~~~Psuedocode~~~
+~~~To-Do~~~
+inventory.hpp
+mapTiles.hpp
+mosters.hpp
+player.hpp
+load_file.hpp
+map.hpp
 
-~MAP~
-vector of vectors of mapTile pointers.
-mapTiles{
-	int x, y
-	string Description
-	string Name
-	string Type
-	vector<items>
-	itemps<loot>
-	
-}
-desert and scrub tiles will have generally the same description.
+All cpp files
 
-~ITEMS~
-
-items {
-	string description
-	string name
-	string type
-}
-
-~Monsters~
-
-monsters {
-	int health
-	int stre
-	int agil
-	int inte
-	items equipped
-	items loot
-}
-
-~Player~ {
-	int health
-	int stre
-	int agil
-	int inte
-	items equipped
-	items inve
-	mapTiles* location
-}
+~~~Completed~~~
