@@ -13,6 +13,15 @@
 
 namespace item {
 
+	class gold {
+	public:
+		gold() : goldCount(0) {}
+		int getGold() { return goldCount; }
+		void addGold(int amount) { goldCount += amount; }
+	private:
+		int goldCount;
+	};
+
 	// Base Class
 	class item {
 	public:
@@ -85,7 +94,7 @@ namespace item {
 		Type type;
 		std::vector<Quality> qualities;
 	};
-
+}
 #endif
 
-}
+

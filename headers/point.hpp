@@ -2,6 +2,9 @@
 // Jonathan Hansen
 // 2/22/2020
 
+#ifndef _POINT_HPP_
+#define _POINT_HPP_
+
 namespace point {
 	// Point to use for mapping
 	class point {
@@ -17,3 +20,5 @@ namespace point {
 		int y;
 	};
 }
+
+#endif
